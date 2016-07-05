@@ -4,6 +4,6 @@ namespace Example.WebApplication.Controllers
 {
 	public class MyController : Controller
 	{
-		public IActionResult Action(int dummy) => View();
+		public IActionResult Action(int dummy) => Json("Hello World!");
 	}
 }
