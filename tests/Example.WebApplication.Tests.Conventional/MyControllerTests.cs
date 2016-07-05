@@ -11,7 +11,20 @@ namespace Example.WebApplication.Tests.Conventional
 	{
 
 		[Fact]
-		public async Task MyControllerShouldHaveRouteForActionWithId()
+		public async Task MyControllerShouldHaveRouteForGetActionWithId()
+		{
+			var uri = "/My/Action/1";
+			var builder = new WebHostBuilder().UseStartup(typeof(Startup));
+			using (var client = new TestServer(builder).CreateClient())
+			{
+				var response = await client.GetAsync(uri);
+				response.IsSuccessStatusCode.Should().BeTrue(
+					because: $"{nameof(MyController)}.{nameof(MyController.Action)} should be reachable on '{uri}'.");
+			}
+		}
+
+		[Fact]
+		public async Task MyControllerShouldHaveRouteForPostActionWithId()
 		{
 			var uri = "/My/Action/1";
 			var builder = new WebHostBuilder().UseStartup(typeof(Startup));
