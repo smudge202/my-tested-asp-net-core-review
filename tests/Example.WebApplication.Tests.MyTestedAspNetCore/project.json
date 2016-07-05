@@ -1,0 +1,30 @@
+﻿{
+  "buildOptions": {
+    "warningsAsErrors": true
+  },
+
+  "testRunner": "xunit",
+
+  "dependencies": {
+    "dotnet-test-xunit": "2.2.0-*",
+    "Example.WebApplication": "1.0.0-*",
+    "MyTested.AspNetCore.Mvc": "1.0.0-preview-final",
+    "xunit": "2.2.0-*"
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "dnxcore50",
+        "portable-net451+win8"
+      ],
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0-*",
+          "type": "platform"
+        }
+      }
+    },
+    "net452": {}
+  }
+}

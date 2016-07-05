@@ -1,0 +1,33 @@
+﻿{
+  "buildOptions": {
+    "warningsAsErrors": true
+  },
+
+  "testRunner": "xunit",
+
+  "dependencies": {
+    "dotnet-test-xunit": "2.2.0-*",
+    "Example.WebApplication": "1.0.0-*",
+    "FluentAssertions": "4.1.0",
+    "Moq": "4.6.25-alpha",
+    "Microsoft.AspNetCore.Mvc.WebApiCompatShim": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.TestHost": "1.0.0-rc2-final",
+    "xunit": "2.2.0-*"
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "dnxcore50",
+        "portable-net451+win8"
+      ],
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0-*",
+          "type": "platform"
+        },        
+        "System.Diagnostics.TraceSource": "4.0.0-rc2-24027"
+      }
+    }
+  }
+}
